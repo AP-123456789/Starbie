@@ -43,16 +43,16 @@ The firmware is written in C++ using the Arduino framework via PlatformIO in VS 
 
 ## 10-Hour Build Log
 
-### Hour 1: Environment Setup and WinError 10013
-I started by setting up a PlatformIO workspace for the ESP32-C3, referencing the [Seeed Studio XIAO ESP32-C3 Wiki](https://wiki.seeedstudio.com/SeeedStudio_XIAO_ESP32C3/). Right away, the build crashed with `WinError 10013: An attempt was made to access a socket in a way forbidden by its access permissions`. 
+### Hour 1: Environment Setup and Error 10013
+I started by setting up a PlatformIO workspace for the ESP32-C3, referencing the [Seeed Studio XIAO ESP32-C3 Wiki](https://wiki.seeedstudio.com/SeeedStudio_XIAO_ESP32C3/). Right away, the build crashed with `Error 10013: An attempt was made to access a socket in a way forbidden by its access permissions`. 
 
-After trying admin mode and checking firewalls with no luck, I dug through [PlatformIO Community Forum Discussions and GitHub Issues](https://community.platformio.org/) and realized local network security was blocking the registry port. Changing the package mirror source and clearing the local cache fixed the socket block and let dependencies download.
+After trying admin mode and checking firewalls with having no success, I looked through [PlatformIO Community Forum Discussions and GitHub Issues](https://community.platformio.org/) and realized local network security was blocking the registry port. Changing the package mirror source and clearing the local cache fixed the socket block and let dependencies download.
 
 ### Hours 2–4: Firmware Architecture
-I wrote the core application logic in `Firmware/src/main.cpp`, integrating the [Adafruit SSD1306 Library](https://github.com/adafruit/Adafruit_SSD1306) and [Adafruit GFX Library](https://github.com/adafruit/Adafruit-GFX-Library). Compiling for the RISC-V architecture taught me a lot about managing memory and library conflicts before successfully generating the binary image.
+I wrote the core application logic in `Firmware/src/main.cpp`, integrating the [Adafruit SSD1306 Library](https://github.com/adafruit/Adafruit_SSD1306) and [Adafruit GFX Library](https://github.com/adafruit/Adafruit-GFX-Library). Compiling for the RISC-V architecture taught me a lot about managing memory and library conflicts before successfully generating the binary image, which I initially did not understand.
 
 ### Hours 5–7: Schematic Design
-Moving to hardware, I opened KiCad (`startbie.kicad_sch`) and placed the XIAO ESP32-C3 (`U2`), DHT11 (`U1`), push buttons (`SW1`, `SW2`), pin headers (`J1`, `J2`), and the $10\text{ k}\Omega$ pull-up resistor (`R1`) based on the [DHT11 Datasheet](https://www.component101.com/sensors/dht11-temperature-and-humidity-sensor).
+Transitioning to the hardware, I opened KiCad (`startbie.kicad_sch`) and placed the XIAO ESP32-C3 (`U2`), DHT11 (`U1`), push buttons (`SW1`, `SW2`), pin headers (`J1`, `J2`), and the $10\text{ k}\Omega$ pull-up resistor (`R1`) based on the [DHT11 Datasheet](https://www.component101.com/sensors/dht11-temperature-and-humidity-sensor).
 
 ![Initial schematic layout of Starbie components](https://halflife.hackclub-assets.com/hackclub-half-life/sessions/OcYWjcDouGEzidswYkZNmkY7iSde7Zal/3672f16fc48ff644601823a9ec767ccc451dc171324d1bc1e148893a48449522.jpg)
 
