@@ -120,6 +120,18 @@ I updated the Starbie firmware by adding a temperature and humidity alert system
 
 ---
 
+## BOM
+
+| REFERENCE | VALUE | QUANTITY | DESCRIPTION |
+| :--- | :--- | :--- | :--- |
+| U2 | XIAO ESP32-C3 | 1 | Main microcontroller |
+| U1 | DHT11 | 1 | Temperature and humidity sensor |
+| SW1 | Push Button | 1 | User input button |
+| SW2 | Push Button | 1 | User input button |
+| R1 | 10k Ohm | 1 | Resistor |
+| J1 | 4-pin connector | 1 | Power and I²C connections |
+| J2 | 8-pin connector | 1 | Component connections |
+
 ## References
 
 * [Seeed Studio XIAO ESP32-C3 Wiki](https://wiki.seeedstudio.com/SeeedStudio_XIAO_ESP32C3/)
