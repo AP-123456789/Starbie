@@ -108,6 +108,16 @@ With a clean DRC check, I generated manufacturing files and inspected them in th
 
 Finally, I added a `.gitignore`, initialized git, and pushed the repo to GitHub.
 
+## 2-Hour Product Personalization
+
+### Hours 11–12: DHT11 Climate Alert Integration & OLED UI Overhaul
+
+I updated the Starbie firmware by adding a temperature and humidity alert system using the DHT11 sensor. The system monitors temperature and humidity and triggers warnings when the temperature exceeds 30°C or humidity exceeds 70%. I also updated the OLED Stats screen to display the sensor readings and corresponding warning messages. If both values exceed their limits, the display indicates both alerts; if the sensor readings are unavailable, it shows “Climate unavailable.” The updated firmware compiled successfully in PlatformIO, confirming that there were no compilation errors.
+
+![ImageP1](https://halflife.hackclub-assets.com/sessions/OcYWjcDouGEzidswYkZNmkY7iSde7Zal/fcb27b651a42b53e49ebd82e337a24241dadf8fb10b9b8101b51d0e51a0289a5.jpg)
+
+![ImageP2 61](https://halflife.hackclub-assets.com/sessions/OcYWjcDouGEzidswYkZNmkY7iSde7Zal/97b2795e2754c40625cab156f8bccdc19c830799383251a61785572d463d47da.jpg)
+
 ---
 
 ## References
