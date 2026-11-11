@@ -1,0 +1,29 @@
+Drill report for startbie.kicad_pcb
+Created on 2026-11-11T21:36:28
+
+Copper Layer Stackup:
+    =============================================================
+    L1 :  F.Cu                      front
+    L2 :  B.Cu                      back
+
+
+Drill file 'startbie-PTH-drl.gbr' contains
+    plated through holes:
+    =============================================================
+    T1  0.300mm  0.0118"  (6 holes))
+    T2  0.762mm  0.0300"  (8 holes))
+    T3  0.800mm  0.0315"  (6 holes))
+    T4  1.000mm  0.0394"  (4 holes))
+    T5  1.500mm  0.0591"  (4 holes))
+
+    Total plated holes count 28
+
+
+Drill file 'startbie-NPTH-drl.gbr' contains
+    unplated through holes:
+    =============================================================
+    T1  1.700mm  0.0669"  (4 holes))
+    T2  2.900mm  0.1142"  (4 holes)  (with 4 slots)
+    T3  4.000mm  0.1575"  (2 holes))
+
+    Total unplated holes count 10
