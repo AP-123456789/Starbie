@@ -91,11 +91,11 @@ Then I initialized the PCB canvas in `startbie.kicad_pcb`...
 
 ...and routed the copper traces on the top (`F.Cu`, red) and bottom (`B.Cu`, blue) layers.
 
-![PCB Editor showing routed copper tracks](https://halflife.hackclub-assets.com/hackclub-half-life/sessions/OcYWjcDouGEzidswYkZNmkY7iSde7Zal/990ef104896fb866b8a69dd0e3cefea022af8e1c2555ded6b05a86dbf7bee0b0.jpg)
+<img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/b68fa410-bee0-4dc3-a6ff-95735320ff4b" />
 
-When I ran the Design Rules Checker (DRC), it flagged 5 errors and 20 warnings.
+When I ran the Design Rules Checker (DRC), it flagged 20 warnings.
 
-![Design Rules Checker window showing courtyard and track width errors](https://halflife.hackclub-assets.com/hackclub-half-life/sessions/OcYWjcDouGEzidswYkZNmkY7iSde7Zal/f340d638d51daad1920c314e6d9f1426e89be20078605acced034edde3372e3d.jpg)
+<img width="541" height="279" alt="image" src="https://github.com/user-attachments/assets/e6865036-8e08-4cca-a0bc-39e1d63b6612" />
 
 I had to fix courtyard errors, widen traces that were under $0.2000\text{ mm}$, and clear silkscreen text overlapping solder masks.
 
@@ -104,7 +104,8 @@ I had to fix courtyard errors, widen traces that were under $0.2000\text{ mm}$, 
 ### Hour 10: Gerbers and GitHub
 With a clean DRC check, I generated manufacturing files and inspected them in the KiCad Gerber Viewer.
 
-![KiCad Gerber Viewer verifying final production layers](https://halflife.hackclub-assets.com/hackclub-half-life/sessions/OcYWjcDouGEzidswYkZNmkY7iSde7Zal/88f93e064083f98b4c3033d99ed11282fe4db9e66314b90c788f7326aaa1122b.jpg)
+<img width="552" height="295" alt="image" src="https://github.com/user-attachments/assets/976dc385-9f73-4422-b82d-6e8c322e70c4" />
+
 
 Finally, I added a `.gitignore`, initialized git, and pushed the repo to GitHub.
 
